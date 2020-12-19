@@ -65,14 +65,14 @@ const EventDetailWrapper = styled.View`
 `;
 
 const DetailLabel = styled.Text`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 12px;
   text-decoration: underline;
 `;
 
 const DetailText = styled.Text`
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
 `;
 
@@ -106,7 +106,7 @@ const EventDetail = ({componentId, event}) => {
                 size={16}
                 color={utils.colors.white}
               />
-              <Label marginLeft size={15} numberOfLines={2}>
+              <Label marginLeft size={14} numberOfLines={2}>
                 {eventDate}
               </Label>
             </LabelIconWrapper>
@@ -116,13 +116,13 @@ const EventDetail = ({componentId, event}) => {
                 size={16}
                 color={utils.colors.white}
               />
-              <Label marginLeft size={15} numberOfLines={2}>
+              <Label marginLeft size={14} numberOfLines={2}>
                 {event.location}
               </Label>
             </LabelIconWrapper>
           </DatetimeWrapper>
         </ScheduleInfoWrapper>
-        <Label marginLeft size={20} numberOfLines={1}>
+        <Label marginLeft size={19} numberOfLines={1}>
           {event.title}
         </Label>
       </ScheduleWrapper>

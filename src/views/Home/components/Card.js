@@ -28,7 +28,7 @@ const NameWrapper = styled.View`
 `;
 
 const Name = styled.Text`
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   color: ${utils.colors.white};
 `;

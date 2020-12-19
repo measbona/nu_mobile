@@ -21,7 +21,7 @@ const Button = styled.TouchableOpacity`
 `;
 
 const Label = styled.Text`
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
 `;
 
@@ -43,7 +43,7 @@ const NavigationBack = ({name, componentId, dismissTheOverLay = false}) => {
         }}>
         <AntIcon
           name="arrowleft"
-          size={30}
+          size={28}
           color={utils.colors.black}
           style={{marginLeft: 25}}
         />

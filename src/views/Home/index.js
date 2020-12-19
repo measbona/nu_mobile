@@ -44,7 +44,7 @@ export default class Home extends React.PureComponent {
             name="Events"
             icon={MDIcon}
             iconName="calendar"
-            size={45}
+            size={40}
             color={utils.colors.green}
             isUnread
             onPress={() => goToEvents(componentId)}
@@ -53,7 +53,7 @@ export default class Home extends React.PureComponent {
             name="Jobs Hiring"
             icon={FeatherIcon}
             iconName="search"
-            size={45}
+            size={40}
             color={utils.colors.navy}
             isUnread
             onPress={() => goToJobs(componentId)}
@@ -62,7 +62,7 @@ export default class Home extends React.PureComponent {
             name="About Us"
             icon={MIcon}
             iconName="group"
-            size={45}
+            size={40}
             color={utils.colors.purple}
             onPress={() => goToAbout(componentId)}
           />

@@ -67,18 +67,18 @@ const NotifyModal = ({notify}) => {
     <Wrapper activeOpacity={0.8} onPress={() => dismissOverLay()}>
       <Modal>
         <HeaderWrapper>
-          <Label size={17} color={utils.colors.white} marginBottom={3}>
+          <Label size={15} color={utils.colors.white} marginBottom={3}>
             {notify.title}
           </Label>
           <CreatedAt>{notifyCreatedAt}</CreatedAt>
         </HeaderWrapper>
         <BodyWrapper>
-          <Label size={17} color={utils.colors.black} numberOfLines={10}>
+          <Label size={15} color={utils.colors.black} numberOfLines={10}>
             {notify.subTitle}
           </Label>
         </BodyWrapper>
         <FooterWrapper activeOpacity={0.8} onPress={() => dismissOverLay()}>
-          <Label size={18}>Close</Label>
+          <Label size={17}>Close</Label>
         </FooterWrapper>
       </Modal>
     </Wrapper>

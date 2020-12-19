@@ -22,13 +22,13 @@ const Image = styled.Image`
 const ScrollView = styled.ScrollView``;
 
 const DescriptionWrapper = styled.View`
-  margin-horizontal: 10px;
-  margin-vertical: 10px;
   align-items: center;
+  margin-vertical: 10px;
+  margin-horizontal: 10px;
 `;
 
 const Text = styled.Text`
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
 `;
 

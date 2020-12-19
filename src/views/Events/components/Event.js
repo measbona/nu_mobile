@@ -75,18 +75,18 @@ const Event = ({event, componentId}) => {
       </IconWrapper>
       <Divider />
       <LabelWrapper>
-        <Label size={17} numberOfLines={1}>
+        <Label size={15} numberOfLines={1}>
           {event.title}
         </Label>
         <IconRow>
           <Ionicon name="location-sharp" size={14} color={utils.colors.white} />
-          <Label marginLeft size={12} numberOfLines={2}>
+          <Label marginLeft size={11} numberOfLines={2}>
             {event.location}
           </Label>
         </IconRow>
         <IconRow>
           <MCIcon name="clock-outline" size={14} color={utils.colors.white} />
-          <Label marginLeft size={12} numberOfLines={2}>
+          <Label marginLeft size={11} numberOfLines={2}>
             {eventDate}
           </Label>
         </IconRow>
@@ -94,7 +94,7 @@ const Event = ({event, componentId}) => {
       <Button
         activeOpacity={0.8}
         onPress={() => showEventDetail(componentId, {event})}>
-        <Label size={12}>View Detail</Label>
+        <Label size={11}>View Detail</Label>
       </Button>
     </Wrapper>
   );

@@ -81,27 +81,27 @@ const Job = ({componentId, job}) => {
       </ImageWrapper>
       <Divider />
       <InfoWrapper>
-        <Label size={17}>{job.title}</Label>
+        <Label size={15}>{job.title}</Label>
         <IconRow>
           <Ionicon name="location-sharp" size={14} color={utils.colors.white} />
-          <Label marginLeft size={12}>
+          <Label marginLeft size={11}>
             {job.location}
           </Label>
         </IconRow>
         <IconRow>
           <MCIcon name="clock-outline" size={14} color={utils.colors.white} />
-          <Label marginLeft size={12}>
+          <Label marginLeft size={11}>
             {job.time}
           </Label>
           <Skeleton />
           <FAIcon name="money" size={14} color={utils.colors.white} />
-          <Label marginLeft size={12}>
+          <Label marginLeft size={11}>
             {job.salary}
           </Label>
         </IconRow>
       </InfoWrapper>
       <Button activeOpacity={0.8} onPress={() => showJob({componentId, job})}>
-        <Label size={12}>View</Label>
+        <Label size={11}>View</Label>
       </Button>
     </Wrapper>
   );

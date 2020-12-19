@@ -13,6 +13,8 @@ const ImageWrapper = styled.View`
   align-items: center;
 `;
 
+const ScrollView = styled.ScrollView``;
+
 const Logo = styled.Image`
   width: 80px;
   height: 127px;
@@ -24,13 +26,13 @@ const TitleWrapper = styled.View`
 `;
 
 const Title = styled.Text`
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   ${(props) => props.textDecoration && `text-decoration: underline`};
 `;
 
 const Label = styled.Text`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   ${(props) => props.marginLeft && `margin-left: ${props.marginLeft}px;`};
   ${(props) =>
@@ -61,52 +63,54 @@ export default class ContactUs extends React.Component {
         <ImageWrapper>
           <Logo source={require('../../assets/icons/nu-logo.png')} />
           <TitleWrapper>
-            <Title size={18}>Norton University</Title>
+            <Title>Norton University</Title>
             <Label>Always Leading</Label>
           </TitleWrapper>
         </ImageWrapper>
-        <InfoWrapper>
-          <Title textDecoration>Register Office</Title>
-          <SubtitleWrapper>
-            <Label alignItem marginLeft={10} marginVertical={10}>
-              Email :
-            </Label>
-            <Link
-              activeOpacity={0.8}
-              onPress={() => {
-                Linking.openURL('http://www.norton-u.com');
-              }}>
-              <Label color={utils.colors.navy}>
-                studentcenter@norton-u.com
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <InfoWrapper>
+            <Title textDecoration>Register Office</Title>
+            <SubtitleWrapper>
+              <Label alignItem marginLeft={10} marginVertical={10}>
+                Email :
               </Label>
-            </Link>
-          </SubtitleWrapper>
-          <Title textDecoration>General Information</Title>
-          <Label marginLeft={10} marginVertical={10}>
-            Mobile : 093 888 569 / 093 888 359
-          </Label>
-          <Label marginLeft={10} marginVertical={10}>
-            Tel : 023 982 177
-          </Label>
-          <Label marginLeft={10} marginVertical={10}>
-            Email : info@norton-u.com
-          </Label>
-          <Label marginLeft={10} marginVertical={10}>
-            Website : www.norton-u.com
-          </Label>
-          <Title textDecoration>Admin and Personnel</Title>
-          <Label marginLeft={10} marginVertical={10}>
-            Tel : 010 633 086
-          </Label>
-          <Label marginLeft={10} marginVertical={10}>
-            Email : admin@norton-u.com
-          </Label>
-          <Title textDecoration>Address</Title>
-          <Label marginLeft={10} marginVertical={10}>
-            St. Keo Chanda, Sangkat Chroy Changvar, Khan Chroy Chagvar, Phnom
-            Penh, Cambodia
-          </Label>
-        </InfoWrapper>
+              <Link
+                activeOpacity={0.8}
+                onPress={() => {
+                  Linking.openURL('http://www.norton-u.com');
+                }}>
+                <Label color={utils.colors.navy}>
+                  studentcenter@norton-u.com
+                </Label>
+              </Link>
+            </SubtitleWrapper>
+            <Title textDecoration>General Information</Title>
+            <Label marginLeft={10} marginVertical={10}>
+              Mobile : 093 888 569 / 093 888 359
+            </Label>
+            <Label marginLeft={10} marginVertical={10}>
+              Tel : 023 982 177
+            </Label>
+            <Label marginLeft={10} marginVertical={10}>
+              Email : info@norton-u.com
+            </Label>
+            <Label marginLeft={10} marginVertical={10}>
+              Website : www.norton-u.com
+            </Label>
+            <Title textDecoration>Admin and Personnel</Title>
+            <Label marginLeft={10} marginVertical={10}>
+              Tel : 010 633 086
+            </Label>
+            <Label marginLeft={10} marginVertical={10}>
+              Email : admin@norton-u.com
+            </Label>
+            <Title textDecoration>Address</Title>
+            <Label marginLeft={10} marginVertical={10}>
+              St. Keo Chanda, Sangkat Chroy Changvar, Khan Chroy Chagvar, Phnom
+              Penh, Cambodia
+            </Label>
+          </InfoWrapper>
+        </ScrollView>
       </Container>
     );
   }

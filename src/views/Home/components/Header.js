@@ -35,9 +35,9 @@ const Header = () => {
     <Wrapper>
       <Image source={require('../../../assets/icons/nu-logo.png')} />
       <LabelWrapper>
-        <LabelText size={18}>Norton University</LabelText>
+        <LabelText size={19}>Norton University</LabelText>
         <Space />
-        <LabelText size={16}>Always Leading</LabelText>
+        <LabelText size={17}>Always Leading</LabelText>
       </LabelWrapper>
     </Wrapper>
   );
