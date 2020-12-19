@@ -35,7 +35,6 @@ const LabelWrapper = styled.View`
 `;
 
 const Label = styled.Text`
-  font-weight: bold;
   color: ${utils.colors.white};
   font-size: ${(props) => props.size}px;
 `;
@@ -63,15 +62,15 @@ const Notify = ({notify}) => {
       </IconWrapper>
       <Divider />
       <LabelWrapper>
-        <Label size={17} numberOfLines={1}>
+        <Label size={15} numberOfLines={1}>
           {notify.title}
         </Label>
-        <Label size={12} numberOfLines={2}>
+        <Label size={11} numberOfLines={2}>
           {notify.subTitle}
         </Label>
       </LabelWrapper>
       <Button activeOpacity={0.8} onPress={() => showNotify({notify})}>
-        <Label size={12}>View</Label>
+        <Label size={11}>View</Label>
       </Button>
     </Wrapper>
   );

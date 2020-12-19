@@ -21,7 +21,6 @@ const Modal = styled.View`
 `;
 
 const Label = styled.Text`
-  font-weight: bold;
   color: ${(props) => props.color};
   font-size: ${(props) => props.size}px;
 `;
@@ -86,7 +85,7 @@ const JobModal = ({componentId, job}) => {
               onPress={() => {
                 showJobDetail(componentId, {job});
               }}>
-              <Label size={15} color={utils.colors.white}>
+              <Label size={16} color={utils.colors.white}>
                 View PDF
               </Label>
             </Button>
@@ -95,14 +94,14 @@ const JobModal = ({componentId, job}) => {
               activeOpacity={0.8}
               background={utils.colors.navy}
               onPress={() => console.warn(`DownloadPDF`)}>
-              <Label size={15} color={utils.colors.white}>
+              <Label size={16} color={utils.colors.white}>
                 Download PDF
               </Label>
             </Button>
           </ButtonWrapper>
         </MainWrapper>
         <CloseButton activeOpacity={0.8} onPress={() => dismissOverLay()}>
-          <Label size={17} color={utils.colors.black}>
+          <Label size={18} color={utils.colors.black}>
             Close
           </Label>
         </CloseButton>

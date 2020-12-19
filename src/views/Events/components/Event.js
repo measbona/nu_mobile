@@ -37,7 +37,6 @@ const LabelWrapper = styled.View`
 `;
 
 const Label = styled.Text`
-  font-weight: bold;
   color: ${utils.colors.white};
   font-size: ${(props) => props.size}px;
   ${(props) => props.marginLeft && `margin-left: 5px`};
@@ -79,13 +78,13 @@ const Event = ({event, componentId}) => {
           {event.title}
         </Label>
         <IconRow>
-          <Ionicon name="location-sharp" size={14} color={utils.colors.white} />
+          <Ionicon name="location-sharp" size={10} color={utils.colors.white} />
           <Label marginLeft size={11} numberOfLines={2}>
             {event.location}
           </Label>
         </IconRow>
         <IconRow>
-          <MCIcon name="clock-outline" size={14} color={utils.colors.white} />
+          <MCIcon name="clock-outline" size={10} color={utils.colors.white} />
           <Label marginLeft size={11} numberOfLines={2}>
             {eventDate}
           </Label>
@@ -94,7 +93,7 @@ const Event = ({event, componentId}) => {
       <Button
         activeOpacity={0.8}
         onPress={() => showEventDetail(componentId, {event})}>
-        <Label size={11}>View Detail</Label>
+        <Label size={10}>View Detail</Label>
       </Button>
     </Wrapper>
   );

@@ -4,10 +4,9 @@ import styled from 'styled-components/native';
 import utils from '../../../utils';
 
 const Wrapper = styled.View`
-  height: 120px;
   align-items: center;
-  margin-bottom: 10px;
   flex-direction: row;
+  min-height: ${utils.device.isNotch}px;
   padding-top: ${utils.device.devicePaddingTop}px;
 `;
 
@@ -23,7 +22,6 @@ const LabelWrapper = styled.View`
 
 const LabelText = styled.Text`
   font-size: ${(props) => props.size}px;
-  font-weight: bold;
 `;
 
 const Space = styled.View`
@@ -35,9 +33,9 @@ const Header = () => {
     <Wrapper>
       <Image source={require('../../../assets/icons/nu-logo.png')} />
       <LabelWrapper>
-        <LabelText size={19}>Norton University</LabelText>
+        <LabelText size={18}>Norton University</LabelText>
         <Space />
-        <LabelText size={17}>Always Leading</LabelText>
+        <LabelText size={16}>Always Leading</LabelText>
       </LabelWrapper>
     </Wrapper>
   );

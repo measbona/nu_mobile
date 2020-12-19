@@ -58,7 +58,9 @@ const bottomTabStack = ({id, component, text, icon}) => ({
       bottomTab: {
         text,
         icon,
+        fontSize: 9,
         textColor: utils.colors.grey,
+        fontFamily: 'Montserrat-Bold',
         selectedTextColor: utils.colors.gold,
         selectedIconColor: utils.colors.gold,
       },
@@ -71,15 +73,15 @@ export const popBack = (componentId) => Navigation.pop(componentId);
 export const dismissOverLay = () => Navigation.dismissAllOverlays();
 
 export const setRootHome = async () => {
-  const homeIcon = await FAW5Icon.getImageSource('home', 25, utils.colors.grey);
+  const homeIcon = await IoniIcon.getImageSource('home', 23, utils.colors.grey);
   const bellIcon = await IoniIcon.getImageSource(
     'notifications',
-    28,
+    23,
     utils.colors.grey,
   );
   const contactIcon = await MIcon.getImageSource(
     'contact-mail',
-    28,
+    23,
     utils.colors.grey,
   );
 

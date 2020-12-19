@@ -7,7 +7,7 @@ const Wrapper = styled.View``;
 const CardWrapper = styled.TouchableOpacity`
   height: 90px;
   align-items: center;
-  margin-top: 20px;
+  margin-bottom: 15px;
   border-radius: 10px;
   flex-direction: row;
   width: ${utils.device.screenWidth - 32}px;
@@ -28,13 +28,11 @@ const NameWrapper = styled.View`
 `;
 
 const Name = styled.Text`
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
   color: ${utils.colors.white};
 `;
 
 const BadgeDot = styled.View`
-  top: 18px;
   right: 0px;
   width: 15px;
   height: 15px;

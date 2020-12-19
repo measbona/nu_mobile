@@ -5,11 +5,10 @@ import {popBack, dismissOverLay} from '../navigation/screen';
 import utils from '../utils';
 
 const Wrapper = styled.View`
-  height: 120px;
   align-items: center;
-  margin-bottom: 10px;
   flex-direction: row;
   justify-content: center;
+  min-height: ${utils.device.isNotch}px;
   padding-top: ${utils.device.devicePaddingTop}px;
 `;
 
@@ -21,8 +20,7 @@ const Button = styled.TouchableOpacity`
 `;
 
 const Label = styled.Text`
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 20px;
 `;
 
 const handlePopBack = (componentId, dismissTheOverLay) => {

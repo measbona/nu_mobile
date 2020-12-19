@@ -27,13 +27,11 @@ const TitleWrapper = styled.View`
 
 const Title = styled.Text`
   font-size: 16px;
-  font-weight: bold;
   ${(props) => props.textDecoration && `text-decoration: underline`};
 `;
 
 const Label = styled.Text`
   font-size: 14px;
-  font-weight: bold;
   ${(props) => props.marginLeft && `margin-left: ${props.marginLeft}px;`};
   ${(props) =>
     props.marginVertical && `margin-vertical: ${props.marginVertical}px;`};

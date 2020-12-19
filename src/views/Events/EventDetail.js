@@ -48,7 +48,6 @@ const DatetimeWrapper = styled.View`
 `;
 
 const Label = styled.Text`
-  font-weight: bold;
   color: ${utils.colors.white};
   font-size: ${(props) => props.size}px;
   ${(props) => props.marginLeft && `margin-left: 5px`};
@@ -65,15 +64,13 @@ const EventDetailWrapper = styled.View`
 `;
 
 const DetailLabel = styled.Text`
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
   margin-bottom: 12px;
   text-decoration: underline;
 `;
 
 const DetailText = styled.Text`
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 11px;
 `;
 
 const EventDetail = ({componentId, event}) => {
@@ -106,7 +103,7 @@ const EventDetail = ({componentId, event}) => {
                 size={16}
                 color={utils.colors.white}
               />
-              <Label marginLeft size={14} numberOfLines={2}>
+              <Label marginLeft size={10} numberOfLines={2}>
                 {eventDate}
               </Label>
             </LabelIconWrapper>
@@ -116,13 +113,13 @@ const EventDetail = ({componentId, event}) => {
                 size={16}
                 color={utils.colors.white}
               />
-              <Label marginLeft size={14} numberOfLines={2}>
+              <Label marginLeft size={10} numberOfLines={2}>
                 {event.location}
               </Label>
             </LabelIconWrapper>
           </DatetimeWrapper>
         </ScheduleInfoWrapper>
-        <Label marginLeft size={19} numberOfLines={1}>
+        <Label marginLeft size={17} numberOfLines={1}>
           {event.title}
         </Label>
       </ScheduleWrapper>

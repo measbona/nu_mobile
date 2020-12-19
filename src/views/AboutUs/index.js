@@ -4,6 +4,9 @@ import Header from '../../lib/NavigationBack';
 
 import utils from '../../utils';
 
+const imageWidth = utils.device.screenWidth - 42;
+const imageHeight = imageWidth * 0.5625;
+
 const Container = styled.View`
   flex: 1;
 `;
@@ -12,11 +15,14 @@ const BodyWrapper = styled.View`
   flex: 1;
 `;
 
-const ImageWrapper = styled.View``;
+const ImageWrapper = styled.View`
+  align-items: center;
+`;
 
 const Image = styled.Image`
-  width: ${utils.device.screenWidth}px;
-  height: ${utils.device.screenWidth / 2}px;
+  border-radius: 10px;
+  width: ${imageWidth}px;
+  height: ${imageHeight}px;
 `;
 
 const ScrollView = styled.ScrollView``;
@@ -29,7 +35,6 @@ const DescriptionWrapper = styled.View`
 
 const Text = styled.Text`
   font-size: 12px;
-  font-weight: bold;
 `;
 
 export default class Events extends React.PureComponent {

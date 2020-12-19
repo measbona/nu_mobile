@@ -41,7 +41,6 @@ const InfoWrapper = styled.View`
 `;
 
 const Label = styled.Text`
-  font-weight: bold;
   color: ${utils.colors.white};
   font-size: ${(props) => props.size}px;
   ${(props) => props.marginLeft && `margin-left: 5px`};
@@ -84,24 +83,24 @@ const Job = ({componentId, job}) => {
         <Label size={15}>{job.title}</Label>
         <IconRow>
           <Ionicon name="location-sharp" size={14} color={utils.colors.white} />
-          <Label marginLeft size={11}>
+          <Label marginLeft size={10}>
             {job.location}
           </Label>
         </IconRow>
         <IconRow>
           <MCIcon name="clock-outline" size={14} color={utils.colors.white} />
-          <Label marginLeft size={11}>
+          <Label marginLeft size={10}>
             {job.time}
           </Label>
           <Skeleton />
           <FAIcon name="money" size={14} color={utils.colors.white} />
-          <Label marginLeft size={11}>
+          <Label marginLeft size={10}>
             {job.salary}
           </Label>
         </IconRow>
       </InfoWrapper>
       <Button activeOpacity={0.8} onPress={() => showJob({componentId, job})}>
-        <Label size={11}>View</Label>
+        <Label size={10}>View</Label>
       </Button>
     </Wrapper>
   );

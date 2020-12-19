@@ -32,7 +32,6 @@ const HeaderWrapper = styled.View`
 `;
 
 const Label = styled.Text`
-  font-weight: bold;
   font-size: ${(props) => props.size}px;
   ${(props) => props.color && `color: ${props.color}`};
   ${(props) => props.marginBottom && `margin-bottom: ${props.marginBottom}px`};
@@ -40,7 +39,6 @@ const Label = styled.Text`
 
 const CreatedAt = styled.Text`
   font-size: 11px;
-  font-weight: bold;
   color: ${utils.colors.white};
 `;
 
@@ -67,18 +65,18 @@ const NotifyModal = ({notify}) => {
     <Wrapper activeOpacity={0.8} onPress={() => dismissOverLay()}>
       <Modal>
         <HeaderWrapper>
-          <Label size={15} color={utils.colors.white} marginBottom={3}>
+          <Label size={16} color={utils.colors.white} marginBottom={3}>
             {notify.title}
           </Label>
           <CreatedAt>{notifyCreatedAt}</CreatedAt>
         </HeaderWrapper>
         <BodyWrapper>
-          <Label size={15} color={utils.colors.black} numberOfLines={10}>
+          <Label size={16} color={utils.colors.black} numberOfLines={10}>
             {notify.subTitle}
           </Label>
         </BodyWrapper>
         <FooterWrapper activeOpacity={0.8} onPress={() => dismissOverLay()}>
-          <Label size={17}>Close</Label>
+          <Label size={18}>Close</Label>
         </FooterWrapper>
       </Modal>
     </Wrapper>
