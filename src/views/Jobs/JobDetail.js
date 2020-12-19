@@ -9,7 +9,7 @@ const Container = styled.View`
 const ViewJobDetail = ({componentId, job}) => {
   return (
     <Container>
-      <Header dismissTheModal name="View PDF" componentId={componentId} />
+      <Header dismissTheOverLay name="View PDF" componentId={componentId} />
     </Container>
   );
 };

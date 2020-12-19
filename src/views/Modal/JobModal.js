@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import utils from '../../utils';
-import {dismissModal, showJobDetail} from '../../navigation/screen';
+import {dismissOverLay, showJobDetail} from '../../navigation/screen';
 
-const Wrapper = styled.View`
+const Wrapper = styled.TouchableOpacity`
   flex: 1;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
 `;
 
 const Modal = styled.View`
@@ -72,7 +73,7 @@ const CloseButton = styled.TouchableOpacity`
 
 const JobModal = ({componentId, job}) => {
   return (
-    <Wrapper>
+    <Wrapper activeOpacity={0.8} onPress={() => dismissOverLay()}>
       <Modal>
         <MainWrapper>
           <ImageWrapper>
@@ -100,7 +101,7 @@ const JobModal = ({componentId, job}) => {
             </Button>
           </ButtonWrapper>
         </MainWrapper>
-        <CloseButton activeOpacity={0.8} onPress={() => dismissModal()}>
+        <CloseButton activeOpacity={0.8} onPress={() => dismissOverLay()}>
           <Label size={18} color={utils.colors.black}>
             Close
           </Label>

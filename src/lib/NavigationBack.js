@@ -1,7 +1,7 @@
 import React from 'react';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import styled from 'styled-components/native';
-import {popBack, dismissModal} from '../navigation/screen';
+import {popBack, dismissOverLay} from '../navigation/screen';
 import utils from '../utils';
 
 const Wrapper = styled.View`
@@ -25,19 +25,21 @@ const Label = styled.Text`
   font-weight: bold;
 `;
 
-const handlePopBack = (componentId, dismissTheModal) => {
-  if (dismissTheModal) dismissModal();
+const handlePopBack = (componentId, dismissTheOverLay) => {
+  if (dismissTheOverLay) {
+    dismissOverLay();
+  }
 
   popBack(componentId);
 };
 
-const NavigationBack = ({name, componentId, dismissTheModal = false}) => {
+const NavigationBack = ({name, componentId, dismissTheOverLay = false}) => {
   return (
     <Wrapper>
       <Button
         activeOpacity={0.8}
         onPress={() => {
-          handlePopBack(componentId, dismissTheModal);
+          handlePopBack(componentId, dismissTheOverLay);
         }}>
         <AntIcon
           name="arrowleft"

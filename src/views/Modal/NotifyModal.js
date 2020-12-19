@@ -3,12 +3,13 @@ import styled from 'styled-components/native';
 import moment from 'moment';
 import utils from '../../utils';
 
-import {dismissModal} from '../../navigation/screen';
+import {dismissOverLay} from '../../navigation/screen';
 
-const Wrapper = styled.View`
+const Wrapper = styled.TouchableOpacity`
   flex: 1;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
 `;
 
 const Modal = styled.View`
@@ -63,7 +64,7 @@ const FooterWrapper = styled.TouchableOpacity`
 const NotifyModal = ({notify}) => {
   const notifyCreatedAt = moment(notify.createdAt).format('MMM D YYYY HH:mma');
   return (
-    <Wrapper>
+    <Wrapper activeOpacity={0.8} onPress={() => dismissOverLay()}>
       <Modal>
         <HeaderWrapper>
           <Label size={17} color={utils.colors.white} marginBottom={3}>
@@ -76,7 +77,7 @@ const NotifyModal = ({notify}) => {
             {notify.subTitle}
           </Label>
         </BodyWrapper>
-        <FooterWrapper activeOpacity={0.8} onPress={() => dismissModal()}>
+        <FooterWrapper activeOpacity={0.8} onPress={() => dismissOverLay()}>
           <Label size={18}>Close</Label>
         </FooterWrapper>
       </Modal>

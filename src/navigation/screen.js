@@ -66,17 +66,9 @@ const bottomTabStack = ({id, component, text, icon}) => ({
   },
 });
 
-export const dismissModal = () => {
-  Navigation.dismissAllModals({
-    animations: {
-      dismissModal: {
-        enabled: true,
-      },
-    },
-  });
-};
-
 export const popBack = (componentId) => Navigation.pop(componentId);
+
+export const dismissOverLay = () => Navigation.dismissAllOverlays();
 
 export const setRootHome = async () => {
   const homeIcon = await FAW5Icon.getImageSource('home', 25, utils.colors.grey);
@@ -114,23 +106,10 @@ export const setRootHome = async () => {
       },
     },
   });
-
-  // if (utils.devices.isAndroid) {
-  //   Navigation.events().registerBottomTabSelectedListener(
-  //     async ({ selectedTabIndex, unselectedTabIndex }) => {
-  //       const sameTab = selectedTabIndex === unselectedTabIndex
-  //       const tabId = TABS[selectedTabIndex].id
-
-  //       if (sameTab) {
-  //         await Navigation.popToRoot(tabId)
-  //       }
-  //     }
-  //   )
-  // }
 };
 
 export const showNotify = (passProps) => {
-  Navigation.showModal({
+  Navigation.showOverlay({
     component: {
       name: NOTIFY_MODAL,
       passProps,
@@ -140,11 +119,6 @@ export const showNotify = (passProps) => {
           componentBackgroundColor: 'transparent',
         },
         modalPresentationStyle: 'overCurrentContext',
-        animations: {
-          showModal: {
-            enabled: true,
-          },
-        },
       },
     },
   });
@@ -212,7 +186,7 @@ export const showEventDetail = (componentId, passProps) => {
 };
 
 export const showJob = (passProps) => {
-  Navigation.showModal({
+  Navigation.showOverlay({
     stack: {
       children: [
         {
@@ -223,12 +197,6 @@ export const showJob = (passProps) => {
               layout: {
                 backgroundColor: 'transparent',
                 componentBackgroundColor: 'transparent',
-              },
-              modalPresentationStyle: 'overCurrentContext',
-              animations: {
-                showModal: {
-                  enabled: true,
-                },
               },
             },
           },
