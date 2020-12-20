@@ -1,5 +1,4 @@
 import {Navigation} from 'react-native-navigation';
-import FAW5Icon from 'react-native-vector-icons/FontAwesome5';
 import IoniIcon from 'react-native-vector-icons/Ionicons';
 import MIcon from 'react-native-vector-icons/MaterialIcons';
 import utils from '../utils';
@@ -12,7 +11,6 @@ import Events from '../views/Events';
 import Jobs from '../views/Jobs';
 import AboutUs from '../views/AboutUs';
 import EventDetail from '../views/Events/EventDetail';
-import JobModal from '../views/Modal/JobModal';
 import JobDetail from '../views/Jobs/JobDetail';
 
 export const HOME = 'NU.Home';
@@ -23,7 +21,6 @@ export const EVENTS = 'NU.Events';
 export const JOBS = 'NU.Jobs';
 export const ABOUT_US = 'NU.AboutUs';
 export const EVENT_DETAIL = 'NU.EventDetail';
-export const JOB_MODAL = 'NU.JobModal';
 export const JOB_DETAIL = 'NU.JobDetail';
 
 export const Screens = new Map();
@@ -36,7 +33,6 @@ Screens.set(EVENTS, Events);
 Screens.set(JOBS, Jobs);
 Screens.set(ABOUT_US, AboutUs);
 Screens.set(EVENT_DETAIL, EventDetail);
-Screens.set(JOB_MODAL, JobModal);
 Screens.set(JOB_DETAIL, JobDetail);
 
 const hideBottomTabs = {
@@ -183,27 +179,6 @@ export const showEventDetail = (componentId, passProps) => {
           componentBackgroundColor: utils.colors.white,
         },
       },
-    },
-  });
-};
-
-export const showJob = (passProps) => {
-  Navigation.showOverlay({
-    stack: {
-      children: [
-        {
-          component: {
-            name: JOB_MODAL,
-            passProps,
-            options: {
-              layout: {
-                backgroundColor: 'transparent',
-                componentBackgroundColor: 'transparent',
-              },
-            },
-          },
-        },
-      ],
     },
   });
 };

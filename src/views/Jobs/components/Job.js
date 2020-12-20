@@ -3,7 +3,8 @@ import MCIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import styled from 'styled-components/native';
-import {showJob} from '../../../navigation/screen';
+
+import {showJobDetail} from '../../../navigation/screen';
 
 import utils from '../../../utils';
 
@@ -99,7 +100,9 @@ const Job = ({componentId, job}) => {
           </Label>
         </IconRow>
       </InfoWrapper>
-      <Button activeOpacity={0.8} onPress={() => showJob({componentId, job})}>
+      <Button
+        activeOpacity={0.8}
+        onPress={() => showJobDetail(componentId, {job})}>
         <Label size={10}>View</Label>
       </Button>
     </Wrapper>
