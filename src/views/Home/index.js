@@ -99,7 +99,7 @@ export default class Home extends React.PureComponent {
               width: 8,
               height: 8,
               borderRadius: 4,
-              backgroundColor: utils.colors.gold || 'white',
+              backgroundColor: utils.colors.blue || 'white',
             }}
             containerStyle={{paddingVertical: 15}}
             inactiveDotOpacity={0.5}

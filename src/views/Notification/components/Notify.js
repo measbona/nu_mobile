@@ -10,7 +10,7 @@ const Wrapper = styled.View`
   border-radius: 10px;
   flex-direction: row;
   margin-bottom: 10px;
-  background-color: ${utils.colors.gold};
+  background-color: ${utils.colors.blue};
   width: ${utils.device.screenWidth - 32}px;
 `;
 

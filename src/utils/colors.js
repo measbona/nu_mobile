@@ -7,6 +7,7 @@ const colors = {
   green: '#1B9F4A',
   red: '#F22736',
   navy: '#333C8A',
+  blue: 'rgba(74, 159, 168, 1)',
 
   lightWhite: '#F7F8F9',
 };

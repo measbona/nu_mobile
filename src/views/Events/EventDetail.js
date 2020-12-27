@@ -23,7 +23,7 @@ const ScheduleWrapper = styled.View`
   padding-left: 20px;
   padding-vertical: 17px;
   justify-content: space-between;
-  background-color: ${utils.colors.gold};
+  background-color: ${utils.colors.blue};
 `;
 
 const ScheduleInfoWrapper = styled.View`

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/native';
 import Header from '../../lib/NavigationBack';
 import Pdf from 'react-native-pdf';
+import RNPrint from 'react-native-print';
 
 import utils from '../../utils';
 
@@ -19,6 +20,10 @@ const PdfViewer = styled(Pdf)`
   height: ${utils.device.screenHeight}px;
 `;
 
+const printPdf = async (remotePdf) => {
+  await RNPrint.print({filePath: remotePdf});
+};
+
 const ViewJobDetail = ({componentId, job}) => {
   const source = {
     uri: `${job.file}`,
@@ -32,7 +37,7 @@ const ViewJobDetail = ({componentId, job}) => {
         name="Job Detail"
         componentId={componentId}
         printPdf
-        onPrintPress={() => alert('hello')}
+        onPrintPress={() => printPdf(source.uri)}
       />
       <BodyWrapper>
         <PdfViewer source={source} />

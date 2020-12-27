@@ -191,6 +191,8 @@ android {
 dependencies {
     compile 'com.android.support:multidex:1.0.3'
 
+    implementation project(':react-native-splash-screen')
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
@@ -222,6 +224,13 @@ dependencies {
 android {
     defaultConfig {
         multiDexEnabled true
+    }
+
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
     }
 }
 
