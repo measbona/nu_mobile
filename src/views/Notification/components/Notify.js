@@ -5,7 +5,7 @@ import {showNotify} from '../../../navigation/screen';
 
 import utils from '../../../utils';
 
-const Wrapper = styled.View`
+const Wrapper = styled.TouchableOpacity`
   height: 80px;
   border-radius: 10px;
   flex-direction: row;
@@ -56,7 +56,7 @@ const Notify = ({notify}) => {
   const isReaded = notify.readed ? 'bookmark-border' : 'bookmark';
 
   return (
-    <Wrapper>
+    <Wrapper activeOpacity={0.8} onPress={() => showNotify({notify})}>
       <IconWrapper>
         <MDIcon name={isReaded} size={40} color={utils.colors.white} />
       </IconWrapper>

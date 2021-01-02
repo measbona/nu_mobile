@@ -7,7 +7,7 @@ import {showEventDetail} from '../../../navigation/screen';
 
 import utils from '../../../utils';
 
-const Wrapper = styled.View`
+const Wrapper = styled.TouchableOpacity`
   height: 80px;
   border-radius: 10px;
   flex-direction: row;
@@ -68,7 +68,9 @@ const Event = ({event, componentId}) => {
   const eventDate = moment(event.createdAt).format('ddd, MMM D YYYY - HH:mma');
 
   return (
-    <Wrapper>
+    <Wrapper
+      activeOpacity={0.8}
+      onPress={() => showEventDetail(componentId, {event})}>
       <IconWrapper>
         <MCIcon name={availableEvent} size={40} color={utils.colors.white} />
       </IconWrapper>

@@ -8,7 +8,7 @@ import {showJobDetail} from '../../../navigation/screen';
 
 import utils from '../../../utils';
 
-const Wrapper = styled.View`
+const Wrapper = styled.TouchableOpacity`
   height: 80px;
   border-radius: 10px;
   flex-direction: row;
@@ -71,7 +71,9 @@ const Skeleton = styled.View`
 
 const Job = ({componentId, job}) => {
   return (
-    <Wrapper>
+    <Wrapper
+      activeOpacity={0.8}
+      onPress={() => showJobDetail(componentId, {job})}>
       <ImageWrapper>
         <Image
           source={{
